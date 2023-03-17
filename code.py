@@ -50,7 +50,7 @@ def login_menu():
         login()
     else:
         e = input("Exit the portal? (Y/N) ")
-        if e.upper() == "N":
+        if e in "Nn":
             login_menu()
 
 
@@ -98,7 +98,7 @@ def login():
         else:
             print("Invalid choice!")
             x1 = input("Exit the portal? (Y/N) ")
-            if x1.upper() == "N":
+            if x1 in "Nn":
                 login_menu()
 
 
@@ -263,4 +263,5 @@ def account():
 
 
 # Calling the first function, hence starting the program
-login_menu()
+if __name__ == "__main__":
+  login_menu()
